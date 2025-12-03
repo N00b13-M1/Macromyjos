@@ -1,0 +1,21 @@
+/* div p	descendant	All <p> inside <div> at any depth
+div > p	direct child	Only <p> directly inside <div>
+div + p	adjacent sibling	The first <p> right after <div>
+div ~ p */
+
+
+.test p {
+    color: orange;
+}
+
+.test > p {
+    color: red;
+}
+
+.test + p {
+    color: greenyellow
+}
+
+/* .test ~ p {
+    color: purple
+} */

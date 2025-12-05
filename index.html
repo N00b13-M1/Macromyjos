@@ -7,12 +7,11 @@
         *{
             background-color: rgb(191, 23, 43);
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: whitesmoke;
         }
 
-        h1{
-            font-family: "Monoton", sans-serif;
-            font-weight: 400;
-            font-style: normal;
+        nav>ul{
+            display: none;
         }
 
 
@@ -22,11 +21,97 @@
             text-align: center;
 
         }
-        main {
-            color: whitesmoke;
-            margin: auto;
-            text-align: center;
+
+        .grid1{
+            display: grid;
+            grid-template-columns:1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: 
+            "hero"
+            "description"
+            "image"
+            ;
         }
+
+
+        .hero{
+            grid-area: hero;
+            text-align: center;
+            h1{
+                font-family: "Monoton", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                margin-bottom: 0;
+                font-size: 9vw
+            }
+            p{
+                margin-top: 0; 
+                font-size: 5vw;
+            } 
+        }
+        
+        .description{
+            grid-area: description;
+            /* background-color: blue; */
+            text-align: center;
+            p{
+                font-size: 4vw; 
+            } 
+        }
+
+        .image{
+            grid-area: image;
+            display: flex;
+            justify-content: center;
+            img {
+                border:3px solid whitesmoke; 
+                border-radius: 1%; 
+                width: 90%; 
+                max-width: 40vh;
+                box-shadow: -0.6rem 0.4rem 10px black;
+            }
+        }
+
+        .grid2{
+            margin-top: 5%;
+            display: grid;
+            grid-template-columns:1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            "button"
+            "list"
+            ;
+        }
+        
+        .button{
+                grid-area: button;
+                display: flex;
+                justify-content: center;
+                button{
+                    border-radius: 50px; 
+                    border: 3px solid whitesmoke; font-size: 3vw; 
+
+                    text-align: center;
+                }
+        }
+
+        .list{
+            grid-area: list;
+            display: flex;
+            justify-content: center;
+            ul {
+                list-style: none;
+                padding: 0;
+                li{ 
+                    display:flex; 
+                    justify-content: center;
+                    i{
+                        color: whitesmoke;
+                    }
+                }
+            }
+        }
+
     </style>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,36 +122,52 @@
 </head>
 <body>
     <div class="container">
-    <nav>
-        <ul style="display:none">
-        <li>Who Am I</li>
-        <li>My Style</li>
-        <li>Portfolio</li>
-        <li>Past exhibits</li>
-        </ul>
-    </nav>
-    <main style="margin:auto">
-    <h1 style="font-size: 4vw; margin: 0 auto;">Marcromyjos
-    </h1>
-    <p style="margin-top: 0; font-size: 2vw;">Capturing Filipino heritage & culture on canvas!</p>
-    <p>
-        <i>Discover my creative vision at my following upcoming international exhibit:</i>
-    </p>
-    <br>
-    <div class="image"><img src="./images/exhibit.JPG" alt="exhibit_cangiante" style="border:3px whitesmoke solid; border-radius: 1%; width: 40vh; box-shadow: -0.6rem 0.4rem 10px black;">
-        </div>
-    </div>
-    </main>
-    <footer style="display:flex;justify-content: center; margin-top: 2%;">
-        <div>
-        <button style="background-color: #bf172b; color: whitesmoke; border-radius: 50px; border: 2px solid whitesmoke; font-size: 1.2vw; text-align: center;">Where to find me?</button> 
-        <ul style="list-style: none;padding: 0;">
-            <li style="display:flex; justify-content: center;"><a href="https://www.instagram.com/watermarcromyjos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" target="_blank">
-                <i class="fa-brands fa-instagram fa-beat fa-xl" style="color: whitesmoke;"></i> 
-            </a></li>
-        </ul>
-        </div>   
-    </footer>
+        <nav>
+            <ul>
+                <li>Who Am I</li>
+                <li>My Style</li>
+                <li>Portfolio</li>
+                <li>Past exhibits</li>
+            </ul>
+        </nav>
+        <main class="grid1">
+            <!-- grid1 -->
+            <div class="hero">
+                <!-- hero -->
+                <h1>
+                    Marcromfff
+                </h1>
+                <p>Capturing Filipino heritage & culture on canvas!</p>
+            </div>
+            <div class="description">
+                <!-- desc -->
+                <p>
+                    <i>Next solo art exhibit:</i>
+                </p>
+            </div>
+            <div class="image">
+                <!-- img -->
+                <img src="./images/exhibit.JPG" alt="exhibit_cangiante">
+            </div>
+
+        </main>
+        <footer class="grid2">
+            <!-- test -->
+                <div class="button">
+                    <!-- button -->
+                    <button>More info?</button> 
+                </div>
+                <div class="list">
+                    <!-- list -->
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/watermarcromyjos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" target="_blank">
+                                <i class="fa-brands fa-instagram fa-beat fa-xl"></i> 
+                            </a>
+                        </li>
+                    </ul> 
+                </div>
+        </footer>
     </div>
     <script src="https://kit.fontawesome.com/70eab3aea3.js" crossorigin="anonymous"></script>
 </body>

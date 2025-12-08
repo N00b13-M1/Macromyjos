@@ -35,14 +35,15 @@
         .hero{
             grid-area: hero;
             text-align: center;
-            margin-top:1%;
+            margin-top:0%;
             h1{
                 font-family: "Monoton", sans-serif;
                 font-weight: 400;
                 font-style: normal;
                 margin-top: 0;
                 margin-bottom: 0;
-                font-size: 11vw
+                font-size: 11vw;
+                line-height: 1; 
             }
             p{
                 margin-top: 0; 
